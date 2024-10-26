@@ -18,13 +18,17 @@ const Sidebar: React.FC<SidebarProps> = ({ items }) => {
     const router = useRouter();
     const pathname = usePathname()
 
-    if(!["/user", "/order", "/", "", "/cart"].includes(pathname)) return null
+    console.log("debug: pathname", pathname)
+    const inProductDetail = pathname.includes("/products/")
+    const inProductList = pathname.includes("/")
+    const inCart = pathname.includes("/cart")
+
+    if (!inProductDetail && !inProductList && !inCart) return null
   
     const handleNavigation = (route: string) => {
       router.push(route);
     };
     
-    console.log(pathname)
     return (
       <div className="sidebar-menu vertical-center">
         {items.map((item, index) => (

@@ -6,4 +6,6 @@ export type CartState = {
   products: IProduct[] | [];
   total: number;
   itemCount: number;
+  filterOpen: boolean;
+  promoBanner: boolean;
 };

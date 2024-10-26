@@ -14,6 +14,8 @@ export const useCartStore = create<CartState & CartAction>()(
       products: [],
       total: 0,
       itemCount: 0,
+      filterOpen: false,
+      promoBanner: true,
       setProducts: (item: IProduct[]) => {
         const updatedItems = [...item];
         set({ products: updatedItems });
@@ -99,6 +101,20 @@ export const useCartStore = create<CartState & CartAction>()(
           itemCount: 0,
         }));
       },
+      toggleFilterOpen: () => {
+        console.log("ketrigger")
+        const filterOpen = get().filterOpen;
+       
+        set(() => ({
+          filterOpen: !filterOpen
+        }))
+      },
+      togglePromoBanner: () => {
+        const promoBanner = get().promoBanner;
+        set(() => ({
+          promoBanner: !promoBanner
+        }))
+      },
     }),
     {
       name: "zustandProduct&CartbySN",
@@ -106,6 +122,8 @@ export const useCartStore = create<CartState & CartAction>()(
         items: state.items,
         products: state.products,
         total: state.total,
+        filterOpen: state.filterOpen,
+        promoBanner: state.promoBanner
       }),
     }
   )
