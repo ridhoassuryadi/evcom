@@ -17,6 +17,7 @@
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@tabler/icons-react": "^2.45.0",
+    "clsx": "^2.1.1",
     "embla-carousel-react": "8.0.0-rc18",
     "framer-motion": "^10.18.0",
     "next": "14.0.4",
