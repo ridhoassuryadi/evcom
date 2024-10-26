@@ -9,4 +9,6 @@ export type CartAction = {
   clearCart: () => void;
   getCartCount: () => number;
   filterProductsByPrice: (lowerPrice: number, higherPrice: number) => void;
+  toggleFilterOpen: () => void;
+  togglePromoBanner: () => void;
 };

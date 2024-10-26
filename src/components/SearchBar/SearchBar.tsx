@@ -38,6 +38,7 @@ const Searchbar = () => {
 
   return (
     <form className="w-full relative ">
+      <p className="ml-5 text-sm font-bold mb-2">Name</p>
       <div className="relative px-4">
         <input
           type="search"

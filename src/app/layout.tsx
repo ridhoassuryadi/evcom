@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import LayoutStyle from './layout.module.scss';
 
-import { MdOutlineAddShoppingCart, MdOutlineHome, MdOutlineDeliveryDining, MdShoppingCart, MdDeliveryDining, MdHome, MdOutlinePerson, MdPerson } from "react-icons/md";
+import { MdOutlineAddShoppingCart, MdOutlineHome,  MdShoppingCart, MdHome, MdOutlinePerson, MdPerson } from "react-icons/md";
 
 import Sidebar from "./layouts/sidebar/sidebar";
 const menuItems = [
