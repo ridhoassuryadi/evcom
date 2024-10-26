@@ -37,18 +37,18 @@ const Searchbar = () => {
   };
 
   return (
-    <form className="w-full relative">
-      <div className="relative">
+    <form className="w-full relative ">
+      <div className="relative px-4">
         <input
           type="search"
           placeholder="Search Items Here"
-          className="w-full py-2 px-4 rounded-2xl bg-white text-sm"
+          className="w-full py-2 px-4 rounded-2xl bg-slate-100 text-sm"
           onChange={handleSearch}
         />
       </div>
 
       {activeSearch.length > 0 && (
-        <div className="absolute top-20 bg-slate-800 text-white w-full rounded-xl left-1/2 -translate-x-1/2 flex flex-col">
+        <div className="absolute top-10 bg-slate-800 text-white w-full rounded-xl left-1/2 -translate-x-1/2 flex flex-col">
           {activeSearch.map((suggestion) => (
             <Link
               className="hover:bg-slate-600 p-2 text-lg font-semibold rounded-2xl"

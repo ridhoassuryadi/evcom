@@ -80,16 +80,8 @@ const ProductDetails = () => {
     );
   }}
 />
-        {/* <Image
-          className="w-[400px] h-[400px] object-cover mb-4 rounded-lg"
-          src={product.thumbnail}
-          alt={product.title}
-          height={300}
-          width={300}
-          priority
-        /> */}
         <p className="mb-4">{product.description}</p>
-        <p className="font-bold mb-4">${product.price}</p>
+        <p className="font-bold mb-4">Rp{product.price}</p>
         <button
           className="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600 active:bg-blue-700 mt-4 flex items-center justify-center hover:scale-[1.03] active:scale-[.97] active:duration-75 transition-all ease-in-out"
           onClick={() => addItem(product)}
