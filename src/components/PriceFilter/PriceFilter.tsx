@@ -37,9 +37,9 @@ const PriceFilter = () => {
           <RangeSlider
             min={0}
             max={1000}
-            onInput={(price:Array<string>) => {
-              setLowPrice(price[0])
-              setHighPrice(price[1])
+            onInput={(price) => {
+              setLowPrice(String(price[0]))
+              setHighPrice(String(price[1]))
             }} />
           <div className="flex w-full justify-between mt-2">
             <p className="text-sm">Rp 0</p>
