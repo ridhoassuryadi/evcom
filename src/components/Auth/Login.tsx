@@ -17,8 +17,10 @@ const Login = () => {
 
       const data = await response.json();
 
-      if (data.token) {
-        localStorage.setItem("token", data.token);
+      console.log("debug: data", data)
+
+      if (data.accessToken) {
+        localStorage.setItem("token", data.accessToken);
 
         // Go back to the previous page
         window.history.back();

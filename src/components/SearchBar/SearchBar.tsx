@@ -37,17 +37,14 @@ const Searchbar = () => {
   };
 
   return (
-    <form className="w-[500px] relative">
+    <form className="w-full relative">
       <div className="relative">
         <input
           type="search"
           placeholder="Search Items Here"
-          className="w-full p-4 rounded-2xl bg-slate-800"
+          className="w-full py-2 px-4 rounded-2xl bg-white text-sm"
           onChange={handleSearch}
         />
-        {/* <button className="absolute right-1 top-1/2 -translate-y-1/2 p-4 bg-slate-600 rounded-full">
-          <AiOutlineSearch />
-        </button> */}
       </div>
 
       {activeSearch.length > 0 && (

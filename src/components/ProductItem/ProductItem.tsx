@@ -6,35 +6,46 @@ interface ProductItemProps {
   product: IProduct;
 }
 
-function ProductItem({ product }: ProductItemProps) {
+const ProductItem = ({ product }: ProductItemProps) => {
   return (
-    <div className="w-80 bg-gray-700 shadow rounded">
-      <Link
-        href={`/products/${product.id}`}
-        className="h-48 w-full bg-gray-200 flex flex-col justify-between bg-cover bg-center"
-      >
+    <Link
+      href={`/products/${product.id}`}
+      className=""
+    >
+    <div className="border rounded-lg p-4 flex flex-col items-center relative">
+      {/* Discount Badge */}
+      {10 > 0 && (
+        <span className="absolute top-2 left-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-md z-10">
+          Gratis ongkir
+        </span>
+      )}
+      
+      {/* Image */}
+      <div className="relative w-full h-40 bg-gray-100 rounded-lg overflow-hidden">
         <Image
-          className="h-full w-full cursor-pointer"
+          className="object-cover w-full h-full"
           src={product.thumbnail}
           alt={product.title}
-          height={300}
           width={300}
+          height={300}
           priority
         ></Image>
-      </Link>
-      <div className="p-4 flex flex-col items-center">
-        <Link
-          className="border-b border-transparent hover:border-b-white h-[40px]"
-          href={`/products/${product.id}`}
-        >
-          {product.title}
-        </Link>
-        <h1 className="text-gray-200 text-center mt-1"></h1>{" "}
-        <p className="text-center text-gray-200 mt-1">₹{product.price}</p>{" "}
         <AddtoCart product={product} />
       </div>
+
+      {/* Prices */}
+      <div className="mt-3 text-left self-start">
+        <p className="text-red-600 text-sm font-bold">Rp {product.price}</p>
+      </div>
+
+      {/* Title and Description */}
+      <div className="text-left mt-2">
+        <p className="text-gray-800 font-semibold text-sm">{product.title}</p>
+      </div>
     </div>
+    </Link>
   );
-}
+};
+
 
 export default ProductItem;

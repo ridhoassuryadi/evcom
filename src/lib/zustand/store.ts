@@ -22,6 +22,7 @@ export const useCartStore = create<CartState & CartAction>()(
         set({ filteredProducts: products });
       },
       addItem: (item: IProduct) => {
+        console.log("clicked")
         const items = get().items;
         const existingItem = items.find((i) => i.id === item.id);
         // If the item already exists in the cart, increase its quantity
@@ -35,6 +36,7 @@ export const useCartStore = create<CartState & CartAction>()(
           }));
         } else {
           // Otherwise, add the item to the cart
+          console.log("yow")
           const updatedItems = [...items, { ...item, quantity: 1 }];
           set((state) => ({
             items: updatedItems,

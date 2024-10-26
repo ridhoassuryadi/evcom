@@ -22,12 +22,12 @@ const ProductsPage = () => {
   return (
     <div>
       <div className="flex justify-center items-center my-4">
-        <div className="flex flex-col space-y-4">
+        <div className="fixed top-0 z-30 bg-white p-4 max-w-[480px] flex flex-col space-y-4 z-10 w-full bg-[#4CAF50]">
           <PriceFilter />
           <Searchbar />
         </div>
       </div>
-      <ul className="flex flex-wrap gap-6 justify-center items-center">
+      <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 p-4">
         {filteredProducts.length > 0
           ? filteredProducts.map((product) => (
               <li key={product.id}>
@@ -39,7 +39,7 @@ const ProductsPage = () => {
                 <ProductItem product={product} />
               </li>
             ))}
-      </ul>
+      </div>
     </div>
   );
 };

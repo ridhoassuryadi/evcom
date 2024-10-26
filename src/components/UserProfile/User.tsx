@@ -52,7 +52,7 @@ const User = () => {
   // Render the User component content with user data
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-300">
-      <div className="w-96 bg-gray-800 p-8 shadow-2xl rounded-md">
+      <div className="w-96 p-8 shadow-2xl rounded-md">
         <h1 className="text-2xl font-bold mb-4 text-center">Your Profile</h1>
         <div className="mb-4">
           <p className="text-lg font-semibold">

@@ -11,6 +11,8 @@ export default function CartPage() {
   const { items, total, addItem, removeItem, clearCart, removeItemCompletely } =
     useCartStore();
 
+  console.log(items)
+
   // Using useState to avoid Hydrate mismatch errors caused due to server sending blank data & localstorage sending filled data
   const [cartItems, setCartItems] = useState<IProduct[]>([]);
   const [cartTotal, setCartTotal] = useState<number>(0);
@@ -39,11 +41,11 @@ export default function CartPage() {
 
       {cartItems.length > 0 ? (
         <div>
-          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-1 lg:grid-cols-3">
             {cartItems.map((item) => (
               <li
                 key={item.id}
-                className="bg-[#242424] shadow rounded-xl flex flex-col pb-2"
+                className="shadow rounded-xl flex flex-col pb-2"
               >
                 <Image
                   className="h-64 w-auto flex flex-wrap rounded-t-xl"
@@ -54,7 +56,6 @@ export default function CartPage() {
                 ></Image>
                 <div className="p-4">
                   <h2 className="text-xl font-semibold mt-2">{item.title}</h2>
-                  <p className="text-gray-300 mt-2">{item.description}</p>
                   <div className="flex items-center justify-between mt-4">
                     <span className="text-lg font-bold">₹{item.price} /-</span>
                     <div className="flex items-center space-x-2">
