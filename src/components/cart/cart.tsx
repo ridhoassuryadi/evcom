@@ -28,7 +28,7 @@ export default function CartPage() {
         <h1 className="text-3xl font-bold">Your Cart</h1>
         <div className="flex flex-col sm:flex-row items-center justify-between">
           <span className="text-2xl font-bold">
-            Total Payable: ₹{cartTotal}
+            Total Payable: Rp{cartTotal}
           </span>
           <button
             onClick={() => clearCart()}
@@ -57,7 +57,7 @@ export default function CartPage() {
                 <div className="p-4">
                   <h2 className="text-xl font-semibold mt-2">{item.title}</h2>
                   <div className="flex items-center justify-between mt-4">
-                    <span className="text-lg font-bold">₹{item.price} /-</span>
+                    <span className="text-lg font-bold">Rp {item.price} /-</span>
                     <div className="flex items-center space-x-2">
                       <button
                         onClick={() => removeItem(item.id)}

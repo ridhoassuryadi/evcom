@@ -10,7 +10,7 @@ import Sidebar from "./layouts/sidebar/sidebar";
 const menuItems = [
   { icon: <MdOutlineHome className="icon home" />, iconActive: <MdHome className="icon home" />, label: 'Beranda', route: '/' },
   { icon: <MdOutlineAddShoppingCart className="icon" />, iconActive: <MdShoppingCart className="icon home" />, label: 'Keranjang', route: '/cart' },
-  { icon: <MdOutlineDeliveryDining className="icon" />, iconActive: <MdDeliveryDining className="icon home" />, label: 'Pesanan', route: '/order' },
+  // { icon: <MdOutlineDeliveryDining className="icon" />, iconActive: <MdDeliveryDining className="icon home" />, label: 'Pesanan', route: '/order' },
   { icon: <MdOutlinePerson className="icon" />, iconActive: <MdPerson className="icon home" />, label: 'Profile', route: '/order' },
 ];
 
