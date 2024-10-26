@@ -7,6 +7,8 @@ import Image from "next/image";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import Slider from "@/components/Slider/Slider";
 
+import thumbnailGratisOngkir from '../../../../public/gratis-ongkir.webp'
+
 const ProductDetails = () => {
   const params = useParams();
   const id = Number(params.productId);
@@ -29,7 +31,7 @@ const ProductDetails = () => {
     },
     {
       title: "img-gratis",
-      thumbnail: product.thumbnail
+      thumbnail: thumbnailGratisOngkir
     }
   ]
 
